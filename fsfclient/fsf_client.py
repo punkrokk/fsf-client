@@ -212,6 +212,7 @@ class FSFClient:
         Required method if you want the scan report or sub-objects
         :param sock: the socket
         """
+        data = ''
         try:
             raw_msg_len = sock.recv(4)
             msg_len = struct.unpack('>I', raw_msg_len)[0]
